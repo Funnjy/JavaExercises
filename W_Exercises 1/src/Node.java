@@ -12,13 +12,17 @@ class Node
 {
   private int info;
   Node neste;
+  
   private Node første = neste;
-  public Node( int data, Node etterfølger )
-  {
+  
+  public Node( int data, Node etterfølger ){
     info = data;
     neste = etterfølger;
   }
-
+  
+  int number = 10;
+  
+  
   public int getInfo()
   {
     return info;
