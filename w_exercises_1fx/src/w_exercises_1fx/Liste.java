@@ -58,18 +58,33 @@ public class Liste
     {
         //< fjerner og returnerer første node i lista,
         // returnerer null i tilfelle lista er tom >
-        if(første.neste == null){
+        if(første == null){
             return null; //List is empty
         }
-        første = løper.neste;
-        return første;
+        Node noden = første;
+        første = første.neste;
+        return noden;
     }
 
     public Node fjernSiste()
     {
       //< fjerner og returnerer siste node i lista,
       //  returnerer null i tilfelle lista er tom >
-        return null;
+        if(første == null){
+            return null;
+        }
+        if(første.neste == null){
+            Node noden = første;
+            første = null;
+            return noden;
+        }
+        Node hjelp = første;
+        while (hjelp.neste.neste != null){
+            hjelp = hjelp.neste;
+        }
+        Node noden = hjelp.neste;
+        hjelp.neste = null;
+        return noden;
     }
 
     public String toString()
@@ -77,7 +92,15 @@ public class Liste
       //< returnerer en streng som inneholder alle verdier i lista
       //  med et mellomrom mellom hver verdi. Returnerer en tom streng
       //  i tilfelle lista er tom. >
-        return null;
+        String s = "";
+        Node hjelp = første;
+        if(første == null)
+            return null;
+        while(hjelp != null){
+            s += hjelp.getInfo()+ " ";
+            hjelp = hjelp.neste;
+        }
+        return s + "\n";
     }
   
     class Node

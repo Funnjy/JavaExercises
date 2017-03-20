@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package w_exercises_1fx;
-
 /**
  *
  * @author Anton
@@ -83,7 +82,7 @@ public class Listetest extends JFrame
 
   public void fjernFørsteElement()
   {
-    Node fjernet = heltallsliste.fjernFørste();
+    Liste.Node fjernet = heltallsliste.fjernFørste();
     if (fjernet !=null)
     {
      lista.setText("\t"+ fjernet.getInfo() +" er fjernet fra listen.");
@@ -94,7 +93,7 @@ public class Listetest extends JFrame
 
 	public void fjernSisteElement()
 	{
-	  Node fjernet = heltallsliste.fjernSiste();
+	  Liste.Node fjernet = heltallsliste.fjernSiste();
 	  if (fjernet !=null)
 	  {
 	     lista.setText("\t"+ fjernet.getInfo() +" er fjernet fra listen.");
@@ -135,7 +134,7 @@ public class Listetest extends JFrame
         skrivListe();
      }
     }
-  }
+  } 
 }
 
 
