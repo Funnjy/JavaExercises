@@ -19,7 +19,7 @@ package w_exercises_1fx;
  *
  * @author Anton Ilchenko
  */
-class Node
+/*class Node
 {
     
   private int info;
@@ -55,11 +55,11 @@ class Node
   {
     info = nyVerdi;
   }
-  public void fjernSiste(){
+  public void fjernSiste(){*/
      /*Se om første lement er ikke 0(ikke tom liste)*/
-     if(første != null){
+     /*if(første != null){*/
           /*Se om det andre element er null(1 element i liste)*/
-          if(første.neste == null){
+          /*if(første.neste == null){
               første = null;
           }
           else
@@ -67,14 +67,14 @@ class Node
                   første = første.neste;
               }
               første.neste = null;
-     }
+     }*/
      /*Begynn å gå gjennom alle elementer*/
      /*sjekk om neste element er det siste*/
      /*hvis ja,  fjern. Ellers fortsett*/
-  }
+//  }
   
   //K
-  Node løperk = første;
+ /* Node løperk = første;
   while(løperk.neste != null){
     Node ny = new Node(0, løperk.neste);
     løperk.neste = ny;
@@ -94,5 +94,4 @@ class Node
     løper =  løpr.neste;
 }
 }
-
-
+*/
